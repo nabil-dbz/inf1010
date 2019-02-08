@@ -1,0 +1,8 @@
+1)Le lien entre les classes Menu et Plat est "une agrégation" car la classe Menu a un attribut listePlats_ qui un tableau dynamique qui contient des pointeurs vers des objets de type Plat, donc les plats ne disparaissent
+pas lorsque l'objet de type Menu est détruit (le destructeur de la classe Menu n'efface pas les plats mais il désalloue le poiteur qui pointe vers chaque plat).
+
+2)Si une méthode est déclarée const, elle n'aura pas le droit de modifier aucun attribut.En plus, elle a le droit d'appeler seulement des méthodes qui sont const eux aussi (qui ne modifient pas les attributs d'un objet de la classe) 
+(elle peut servir à être un getter par exemple). 
+
+
+
