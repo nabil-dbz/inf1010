@@ -1,0 +1,6 @@
+﻿  Table.cpp
+c:\users\user\desktop\inf1010\tp2\table.cpp(75): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\user\desktop\inf1010\tp2\table.cpp(90): warning C4018: '<' : incompatibilité signed/unsigned
+  main.cpp
+  Génération de code en cours...
+  TP2.vcxproj -> C:\Users\User\Desktop\inf1010\TP2\TP2\Debug\TP2.exe
