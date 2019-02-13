@@ -1,8 +1,9 @@
-/*
-* Titre : main.cpp - Travail Pratique #1
-* Date : 18 Janvier 2019 
-* Auteur : Allan BEDDOUK
-*/
+/**
+* Ce programme permet de faire la gestion d'un restaurant.
+* \file CodeDemande.cpp
+* \author Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
+* \date 10 février 2019
+**/
 
 #include "Restaurant.h"
 
@@ -65,6 +66,7 @@ int main() {
 
 	cout << "--------------------------------------------------------------------------------------------------" << endl;
 	// Le restaurant Poly2 doit maintenant avoir toutes ses tables libérées
-	cout << poly2;
 
+	cout << poly2;
+	
 }

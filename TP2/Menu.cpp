@@ -21,14 +21,14 @@ Menu::Menu(string fichier, TypeMenu type) {
 Menu::Menu(const Menu & menu):
 	type_(menu.type_)
 {
-	for (int i = 0; i < menu.listePlats_.size(); i++) {
+	for (unsigned i = 0; i < menu.listePlats_.size(); i++) {
 		listePlats_.push_back(new Plat(*menu.listePlats_[i]));
 	}
 }
 
 //destructeur
 Menu::~Menu() {
-	for (int i = 0; i < listePlats_.size(); i++) 
+	for (unsigned i = 0; i < listePlats_.size(); i++) 
 		delete listePlats_[i];
 }
 
@@ -36,6 +36,14 @@ Menu::~Menu() {
 
 int Menu::getNbPlats() const {
 	return listePlats_.size();
+}
+
+Plat * Menu::getPlat(unsigned indice) const
+{
+	if (indice < listePlats_.size())
+		return listePlats_[indice];
+	else
+		return nullptr;
 }
 
 //autres methodes
@@ -160,7 +168,7 @@ Plat * Menu::trouverPlatMoinsCher() const
 }
 
 Plat* Menu::trouverPlat(const string& nom) const {
-	for (int i = 0; i < listePlats_.size(); i++) {
+	for (unsigned i = 0; i < listePlats_.size(); i++) {
 		if (listePlats_[i]->getNom() == nom)
 			return listePlats_[i];
 	}
@@ -170,7 +178,7 @@ Plat* Menu::trouverPlat(const string& nom) const {
 ostream & operator<<(ostream & o, const Menu & menu)
 {
 	// TODO: insérer une instruction return ici
-	for (int i = 0; i < menu.listePlats_.size(); i++) {
+	for (unsigned i = 0; i < menu.listePlats_.size(); i++) {
 		o << "\t" << (*menu.listePlats_[i]);
 	}
 	return o;

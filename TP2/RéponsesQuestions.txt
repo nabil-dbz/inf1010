@@ -1,0 +1,3 @@
+1)Le constructeur par copie et l'opérateur = nous permettent d'initialiser un objet avec un autre objet existant et qui appartient à la même classe.
+2)-le constructeur par copie est appelé lorsqu’on veut intialiser un nouvel objet à partir d'un autre qui est existant. Il copie un objet existant dans un autre objet de la même classe et qui est nouveau.
+  -l'opérateur = est appelé lorsqu’on veut attribuer une nouvelle valeur à un objet déjà initialisé à partir d'un autre objet existant.Il écrase le contenu d'un objet existant pour mettre à sa place le contenu d'un autre objet qui est existant lui aussi.

@@ -55,7 +55,6 @@ void Table::libererTable() {
 	nbPlaces_ += nbClientsATable_;
 	nbClientsATable_ = 0;
 	while(commande_.size()>0) {
-		//delete commande_[commande_.size()-1];
 		commande_.pop_back();
 	}
 }
@@ -72,7 +71,7 @@ void Table::commander(Plat* plat) {
 
 double Table::getChiffreAffaire() const {
 	double chiffre = 0;
-	for (int i = 0; i < commande_.size(); i++) {
+	for (unsigned i = 0; i < commande_.size(); i++) {
 		chiffre += (commande_[i]->getPrix() - commande_[i]->getCout());
 	}
 	return chiffre;
@@ -87,7 +86,7 @@ ostream & operator<<(ostream & o, const Table & table)
 		o << " est occupee. ";
 		if (table.commande_.size() != 0) {
 			o << "Voici la commande passee par les clients : " << endl;
-			for (int i = 0; i < table.commande_.size(); i++) {
+			for (unsigned i = 0; i < table.commande_.size(); i++) {
 				o << "\t" << *table.commande_[i];
 			}
 		}

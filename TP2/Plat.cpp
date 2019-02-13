@@ -20,6 +20,10 @@ Plat::Plat(string nom, double prix, double cout) {
 }
 //getters
 
+Plat::~Plat()
+{
+}
+
 string Plat::getNom() const {
 	return nom_;
 }
@@ -44,10 +48,7 @@ void Plat::setPrix(double prix) {
 //methodes en plus
 bool Plat::operator<(const Plat & plat) const
 {
-	if (prix_ < plat.prix_)
-		return true;
-	else
-		return false;
+	return (prix_ < plat.prix_);
 }
 
 ostream & operator<<(ostream &o, const Plat& plat)
