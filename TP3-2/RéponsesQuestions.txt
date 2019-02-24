@@ -1,0 +1,14 @@
+Réponses aux questions:
+
+1- On utilise l'attribut type_ dans la classe Plat pour pouvoir distinguer ses différentes
+dérivées, soient PlatBio et PlatCustom. Dans le cas ou cet attribut n'existait pas, il 
+serait difficile (ou impossible) d'utiliser un switch case pour différencier
+les dérivées ainsi que pour faire le bon downcasting. 
+2- L'importance du static_cast dans la classe Client et ses dérivées et de pouvoir faire
+les conversions implicites ou explicites des pointeurs entre eux; conversion du pointeur 
+ClientReguiler* au ClientPrestige* par exemple dans le cas ou on déclare un pointeur vers
+ClientRegulier, et puis on se rend compte qu'on a besoin qu'il pointe vers ClientPrestige.
+3- Il est intéressant de dériver ClientPrestige de ClientRegulier parce qu'on peut dire que
+ClientPrestige est un ClientRegulier donc il hérite toutes ses propriétés en plus de ses 
+propres propriétés.
+ 
