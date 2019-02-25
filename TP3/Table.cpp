@@ -1,7 +1,7 @@
 /*
-* Titre : Table.cpp - Travail Pratique #3
-* Date : 11 Février 2019
-* Auteur :Fatou S. MOUNZEO
+* Titre : Table.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
 */
 
 #include "Table.h"
@@ -17,6 +17,12 @@ Table::Table(int id, int nbPlaces) {
 	id_ = id;
 	nbPlaces_ = nbPlaces;
 	nbClientsATable_ = 0;
+	clientPrincipal_ = nullptr;
+}
+
+Table::~Table()
+{
+	commande_.clear();
 }
 
 //getters
@@ -106,12 +112,13 @@ ostream& operator<<(ostream& os, const Table& table)
 		case Fidele:
 			os << *(static_cast<ClientRegulier*>(table.clientPrincipal_)); break;
 		case Prestige:
-			os << *(static_cast<ClientPrestige*>(static_cast<ClientRegulier*>(table.clientPrincipal_))); break;
+			ClientRegulier* clientReg = static_cast<ClientRegulier*>(table.clientPrincipal_);
+			os << *(static_cast<ClientPrestige*>(clientReg)); break;
 		}
-		if (!table.commande_.empty())
+		if (table.commande_.size())
 		{
 			os << "Voici la commande passee par les clients : " << endl;
-			for (unsigned i = 0; i < table.commande_.size(); ++i)
+			for (unsigned i = 0; i < table.commande_.size(); i++)
 			{
 				switch (table.commande_[i]->getType()) {
 				case Regulier:

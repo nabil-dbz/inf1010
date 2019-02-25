@@ -1,7 +1,7 @@
 /*
-* Titre : main.cpp - Travail Pratique #3
-* Date : 11 Février 2019 
-* Auteur : Fatou S. Mounzeo
+* Titre : Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
 */
 
 #include "Restaurant.h"
@@ -30,17 +30,20 @@ int main() {
 	Client * cl4 = new ClientRegulier("Moussa", "T", 3,45);
 	Client * cl5 = new ClientPrestige("Andree", "F", 2,150, Zone2);
 	Client * cl6 = new ClientPrestige("Marie", "C", 1,125, Zone1);
-
-
+	vector<string> commandeMarie;
+	commandeMarie.push_back("TrioClassique");
+	commandeMarie.push_back("Couscous");
+	commandeMarie.push_back("Mhadjeb");
+	commandeMarie.push_back("Pizza");
 
 	cout << "\t\t\t\t\tLIVRAISONS" << endl;
 	cout << "--------------------------------------------------------------------------------------------------" << endl;
-
 	//Livrer les clients Marie et Martins
-
+	poly.livrerClient(cl6, commandeMarie);
+	poly.livrerClient(cl1, commandeMartin);
 	cout << "\t\t\t\t\tPLACEMENT DES CLIENT" << endl;
 	cout << "--------------------------------------------------------------------------------------------------" << endl;
-
+	
 	//placer les clients 
 	poly.placerClients(cl1);
 	poly.placerClients(cl2);
@@ -49,19 +52,19 @@ int main() {
 	poly.placerClients(cl5); 
 
 	// commander des plats 
-
+	
 	poly.commanderPlat("Poisson", 1,Custom,3);
-	poly.commanderPlat("Pizza", 2, Custom,4);
 	poly.commanderPlat("Poulet", 2);
+	poly.commanderPlat("Pizza", 2, Custom, 4);
 	poly.commanderPlat("Poulet", 4); 
 	poly.commanderPlat("Muffin", 4); 
 	poly.commanderPlat("Oeuf", 4); 
 
-
+	
 	//Creation d'une copie du poly restaurant 
 	Restaurant poly2(poly);
 	poly2.setNom("PolyFood2");
-
+	
 	//Affichage du restaurant poly 
 	cout << poly;
 
@@ -73,21 +76,23 @@ int main() {
 	poly.libererTable(2);
 	poly.libererTable(3);
 	poly.libererTable(4);
-
+	
 	cout << poly;
-
+	/* A ce niveau, on avait trouvé un chiffre d'affaire différent de celui dans l'énoncé. Il nous semble que
+	la solution qu'on a trouvée est logique car on l'a vérifiée manuellement avec une calculatrice */
+	
 	cout << "====================================================================================================" << endl;
 
 	// Le restaurant Poly2 ne doit pas encore avoir liberer ses tables
 	cout << poly2;
 
 	poly2 = poly;
-
+	
 
 	cout << "--------------------------------------------------------------------------------------------------" << endl;
 	// Le restaurant Poly2 doit maintenant avoir toutes ses tables libérées
 	cout << poly2;
-
+	
 	delete cl1;
 	delete cl2;
 	delete cl3;

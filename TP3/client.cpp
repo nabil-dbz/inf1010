@@ -1,3 +1,9 @@
+/*
+* Titre : Client.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
+*/
+
 #include "Client.h"
 
 Client::Client()
@@ -46,11 +52,13 @@ string Client::convertirStatutString() const
 		return "Regulier";
 	case Prestige:
 		return "Prestige";
+	default:
+		return "Occasionnel";
 	}
 }
 
 ostream & operator<<(ostream & os, const Client & client)
 {
-	os << "\t -" << client.nom_ << " " << client.prenom_ << " statut: " << client.convertirStatutString();
+	os << "\t -" << client.prenom_ << " " << client.nom_ << " statut: " << client.convertirStatutString();
 	return os;
 }

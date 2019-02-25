@@ -1,3 +1,9 @@
+/*
+* Titre : PlatCustom.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
+*/
+
 #include "PlatCustom.h"
 
 PlatCustom::PlatCustom(string nom, double prix, double cout, int nbIngredients):
@@ -30,8 +36,10 @@ double PlatCustom::calculerSupplement() const
 
 ostream & operator<<(ostream & os, const PlatCustom & plat)
 {
-	os << plat;
+	Plat* platNormal = new Plat(plat);
+	os << *platNormal;
 	os << "\t contient " << plat.nbIngredients_ << " elements modifies pour un supplement total de :"
 		<< plat.supplement_ << "$" << endl;
+	delete platNormal;
 	return os;
 }

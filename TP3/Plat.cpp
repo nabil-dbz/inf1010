@@ -1,7 +1,7 @@
 /*
-* Titre : Plat.cpp - Travail Pratique #3
-* Date : 18 Janvier 2019
-* Auteur : Allan BEDDOUK
+* Titre : Plat.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
 */
 
 #include "Plat.h"
@@ -16,6 +16,10 @@ Plat::Plat(string nom , double prix , double cout){
 	type_ = Regulier;
 }
 //getters 
+
+Plat::~Plat()
+{
+}
 
 string Plat::getNom() const {
 	return nom_; 

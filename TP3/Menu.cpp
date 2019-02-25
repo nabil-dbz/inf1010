@@ -1,7 +1,7 @@
 /*
-* Titre : Menu.cpp - Travail Pratique #3
-* Date : 11 Février 2019
-* Auteur : Fatou S Mounzeo
+* Titre : Menu.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
 */
 
 #include "Menu.h"
@@ -21,11 +21,15 @@ Menu::Menu(string fichier, TypeMenu type) {
 
 Menu::Menu(const Menu & menu): type_(menu.type_)
 {
-	///TODO 
-	///Modifier
 	for (unsigned i = 0; i < menu.listePlats_.size(); ++i)
-	{			listePlats_.push_back(new Plat(*menu.listePlats_[i]));
-
+	{
+		switch (menu.listePlats_[i]->getType()) {
+		case Regulier:
+			listePlats_.push_back(new Plat(*menu.listePlats_[i])); break;
+		case Bio:
+			listePlats_.push_back(new PlatBio(*static_cast<PlatBio*>(menu.listePlats_[i]))); break;
+			
+	}
 	}
 }
 
@@ -43,12 +47,11 @@ vector<Plat*> Menu::getListePlats() const
 ostream& operator<<(ostream& os, const Menu& menu)
 {
 	for (unsigned i = 0; i < menu.listePlats_.size(); ++i) {
-		
-		if(menu.listePlats_[i]->getType()==Regulier)
+		if (menu.listePlats_[i]->getType() == Regulier)
 			os << "\t" << *menu.listePlats_[i];
-
+		else
+			os << "\t" << *static_cast<PlatBio*>(menu.listePlats_[i]);
 	}
-
 	return os;
 }
 
@@ -59,18 +62,31 @@ Menu& Menu::operator+=(const Plat& plat) {
 	return *this;
 }
 
+Menu & Menu::operator+=(const PlatBio & plat)
+{
+	listePlats_.push_back(new PlatBio(plat));
+	return *this;
+}
+
 
 Menu & Menu::operator=(const Menu & menu)
 {
-	///TODO
-	/// A Modifier
+
 	if (this != &menu)
 	{
-		this->type_ = menu.type_;
+		type_ = menu.type_;
 		listePlats_.clear();
 
 		for (unsigned i = 0; i < menu.listePlats_.size(); ++i)
-			listePlats_.push_back(new Plat(*menu.listePlats_[i]));
+		{
+			switch (menu.listePlats_[i]->getType()) {
+			case Regulier:
+				listePlats_.push_back(new Plat(*menu.listePlats_[i])); break;
+			case Bio:
+				listePlats_.push_back(new PlatBio(*static_cast<PlatBio*>(menu.listePlats_[i]))); break;
+
+			}
+		}
 	}
 	return *this;
 }
@@ -218,7 +234,7 @@ Plat * Menu::trouverPlatMoinsCher() const
 }
 
 Plat* Menu::trouverPlat(const string& nom) const {
-	for (int i = 0; i < listePlats_.size(); ++i) {
+	for (unsigned i = 0; i < listePlats_.size(); ++i) {
 		if (listePlats_[i]->getNom() == nom)
 			return listePlats_[i]; 
 	}

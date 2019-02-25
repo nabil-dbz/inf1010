@@ -1,3 +1,9 @@
+/*
+* Titre : ClientRegulier.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
+*/
+
 #include "ClientRegulier.h"
 
 ClientRegulier::ClientRegulier():
@@ -24,6 +30,9 @@ void ClientRegulier::augmenterNbPoints(int bonus)
 
 ostream & operator<<(ostream & os, const ClientRegulier & client)
 {
-	os << client;
-	os << " Possede " << client.nbPoints_ << "points." << endl;
+	Client* clientNormal = new Client(client);
+	os << *clientNormal;
+	os << " Possede " << client.nbPoints_ << " points." << endl;
+	delete clientNormal;
+	return os;
 }

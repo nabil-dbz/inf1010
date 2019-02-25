@@ -1,3 +1,9 @@
+/*
+* Titre : PlatBio.cpp - Travail Pratique #2
+* Date : 25 Février 2019
+* Auteur : Nabil Dabouz(1925256) & Yassine Zarrad(1923579)
+*/
+
 #include "PlatBio.h"
 
 PlatBio::PlatBio(string nom, double prix, double cout, double ecotaxe):
@@ -19,7 +25,9 @@ void PlatBio::setEcoTaxe(double ecoTaxe)
 
 ostream & operator<<(ostream & os, const PlatBio & plat)
 {
-	os << plat;
-	os << "\t comprend une Taxe ecologique de :" << plat.ecoTaxe_ << "$" << endl;
+	Plat* platNormal = new Plat(plat);
+	os << *platNormal;
+	os << "\t \t comprend une Taxe ecologique de :" << plat.ecoTaxe_ << "$" << endl;
+	delete platNormal;
 	return os;
 }
