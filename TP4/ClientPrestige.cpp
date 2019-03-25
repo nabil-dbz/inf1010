@@ -46,7 +46,7 @@ string ClientPrestige::getAdressCodeString() const
 	return zone;
 }
 
-double ClientPrestige :: getReduction(const Restaurant & res, double montant , bool estLivraison)
+double ClientPrestige :: getReduction(const Restaurant & res, double montant , bool estLivraison) const
 {   
 	return -montant * TAUX_REDUC_PRESTIGE + estLivraison * (nbPoints_ < SEUIL_LIVRAISON_GRATUITE) * res.getFraisLivraison(adresse_);
 }

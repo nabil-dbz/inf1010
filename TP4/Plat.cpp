@@ -46,9 +46,9 @@ void Plat::afficherPlat(ostream & os) const
 { 
 	os << "PLAT ---" << nom_ << " - " << prix_ << " $ (" << cout_ << "$ pour le restaurant)" << endl;
 }
-double Plat::getPrixRevient()
-{  return prix_ - cout_;
-    
+double Plat::getPrixRevient() const
+{	
+	return prix_ - cout_;
 }
 Plat * Plat::clone() const
 {
