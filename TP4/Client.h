@@ -16,6 +16,9 @@ class Client
 public:
 	Client();
 	Client(string_view nom, string_view prenom, int tailleGroupe);
+	/**
+	 * @brief destructeur de la classe client
+	 */
     virtual ~Client(){};
 	//getters
 	int getTailleGroupe() const;
@@ -25,9 +28,19 @@ public:
     // setters
     void setTable(Table * ta);
 	//affichage
+	/**
+	 * @brief getNbPoints est une méthode virtuelle pure
+	 */
     virtual int getNbPoints() const = 0;
+	/**
+     * @brief afficherClient Pour afficher un client avec son nom, prenom et table 
+     * @param os, le stream de sortie à afficher.
+     */
     virtual void afficherClient(ostream & os) const = 0;
-    virtual double getReduction(const Restaurant & res, double montant, bool estLivraison) = 0  ;
+	/**
+	 * @brief getReduction est une méthode virtuelle pure
+	 */
+    virtual double getReduction(const Restaurant & res, double montant, bool estLivraison) const = 0  ;
 
 protected:
 	string nom_;
