@@ -8,17 +8,17 @@ Vege::Vege(string nom, double vitamines, double proteines, double mineraux): nom
 {
 }
 
-double Vege::getVitamines()
+double Vege::getVitamines() const
 {
 	return vitamines_;
 }
 
-double Vege::getProteines()
+double Vege::getProteines() const
 {
 	return proteines_;
 }
 
-double Vege::getMineraux()
+double Vege::getMineraux() const
 {
 	return mineraux_;
 }

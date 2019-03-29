@@ -21,7 +21,7 @@ class ClientRegulier : public Client
 	//Autres Methodes
 	void augmenterNbPoints(int bonus);
     void afficherClient(ostream & os) const override; 
-    double getReduction(const Restaurant & res, double montant , bool estLivraison) override;
+    double getReduction(const Restaurant & res, double montant , bool estLivraison) const override;
 
 protected:
 	int nbPoints_;

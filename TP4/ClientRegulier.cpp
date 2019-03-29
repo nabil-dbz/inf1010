@@ -32,7 +32,7 @@ void ClientRegulier::afficherClient(ostream & os) const
 	os << prenom_ << nom_ << endl;
 }
 
-double ClientRegulier::getReduction(const Restaurant & res, double montant, bool estLivraison)
+double ClientRegulier::getReduction(const Restaurant & res, double montant, bool estLivraison) const
 {
 	return (nbPoints_ > SEUIL_DEBUT_REDUCTION)*(-montant * TAUX_REDUC_REGULIER);
 }

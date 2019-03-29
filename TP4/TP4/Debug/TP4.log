@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 ﻿  Client.cpp
   ClientOccasionnel.cpp
   ClientPrestige.cpp
   Génération de code en cours...
   TP4.vcxproj -> C:\Users\User\Desktop\inf1010\TP4\Debug\TP4.exe
+=======
+﻿  Plat.cpp
+  LINK : C:\Users\User\inf1010\TP4\Debug\TP4.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+  TP4.vcxproj -> C:\Users\User\inf1010\TP4\Debug\TP4.exe
+>>>>>>> c73e6d6145fdb369d85aa123f154519387260536

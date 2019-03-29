@@ -1,5 +1,5 @@
 /*
-* Date : 25 f�vrier 2019
+* Date : 25 février 2019
 * Auteur : AbdeB
 */
 
@@ -28,9 +28,18 @@ public:
 	void setPrix(double prix);
 
 	//methodes en plus
-    double getPrixRevient();
+    double getPrixRevient() const;
+	
+/**
+	 * @brief clone pour créer une copie de l'objet courant (une copie alloué dynamiquement)
+	 * @ return une copie de l'objet courant.
+	 */
     virtual Plat *  clone () const;
 	bool operator < (const Plat& plat) const;
+	/**
+     * @brief afficherPlat Pour afficher un plat avec son nom, prix et cout
+     * @param os, le stream de sortie à afficher.
+     */
     virtual void afficherPlat(ostream& os) const; 
 
 

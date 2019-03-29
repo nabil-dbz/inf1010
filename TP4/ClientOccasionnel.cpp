@@ -19,7 +19,7 @@ void ClientOccasionnel::afficherClient(ostream & os) const
 {
 	os << prenom_ << " " << nom_ << ", taille de groupe est " << tailleGroupe_ << endl;
 }
-double ClientOccasionnel::getReduction(const Restaurant & res, double montant, bool estLivraison)
+double ClientOccasionnel::getReduction(const Restaurant & res, double montant, bool estLivraison) const
 {
 	return 0.0;
 }
