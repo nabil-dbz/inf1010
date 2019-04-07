@@ -17,12 +17,22 @@ template<typename T, typename C>
 class GestionnaireGenerique
 {
 public:
+	/**
+     * @brief getConteneur qui retourne une copie du conteneur conteneur_ qui peut etre de type map<string, Plat*> ou set<Table*>
+     */
 	C getConteneur() const {
 		return conteneur_;
 	};
+	/**
+     * @brief ajouter qui permet d'ajouter un élément du type T = pair<string, Plat*> ou Table* au conteneur conteneur_
+     * @param T, l'élément à ajouter.
+     */
 	void ajouter(T t) {
 		conteneur_.insert(t);
 	};
+	/**
+     * @brief getNombreElements retourne la taille de conteneur conteneur_
+     */
 	int getNombreElements() const {
 		return conteneur_.size();
 	};
