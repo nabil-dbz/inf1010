@@ -15,19 +15,21 @@ using namespace std;
 class FoncteurPlatMoinsCher
 { 
 public:
-	FoncteurPlatMoinsCher(pair<string, Plat*> pair1, pair<string, Plat*> pair2) {
-		min_ = pair1.second < pair2.second;
-	};
-
 	bool operator()(pair<string, Plat*> pair1, pair<string, Plat*> pair2) {
-		return pair1.second < pair2.second;
+		return *(pair1.second) < *(pair2.second);
 	};
-private:
-	bool min_;
 };
 
 class FoncteurIntervalle
 {
-   // TODO
+public:
+	FoncteurIntervalle(double borneInf, double borneSup) :
+		borneInf_(borneInf), borneSup_(borneSup) {};
+	bool operator()(pair<string, Plat*> pair) {
+		return (pair.second->getPrix() < borneSup_) && (pair.second->getPrix() > borneInf_);
+	};
+private:
+	double borneInf_;
+	double borneSup_;
 };
 

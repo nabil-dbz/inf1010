@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DEFECTS>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>platbio.h</FILENAME>
+      <LINE>33</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'PlatBio::ecoTaxe_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>PlatBio::{ctor}</FUNCTION>
+    <DECORATED>??0PlatBio@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>33</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>vege.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Vege::proteines_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Vege::{ctor}</FUNCTION>
+    <DECORATED>??0Vege@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>vege.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Vege::vitamines_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Vege::{ctor}</FUNCTION>
+    <DECORATED>??0Vege@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>vege.h</FILENAME>
+      <LINE>30</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Vege::mineraux_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Vege::{ctor}</FUNCTION>
+    <DECORATED>??0Vege@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>30</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>plat.h</FILENAME>
+      <LINE>42</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Plat::prix_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Plat::{ctor}</FUNCTION>
+    <DECORATED>??0Plat@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+  <DEFECT>
+    <SFA>
+      <FILEPATH>c:\users\user\desktop\inf1010\tp5\</FILEPATH>
+      <FILENAME>plat.h</FILENAME>
+      <LINE>42</LINE>
+      <COLUMN>0</COLUMN>
+    </SFA>
+    <DEFECTCODE>26495</DEFECTCODE>
+    <DESCRIPTION>Variable 'Plat::cout_' is uninitialized. Always initialize a member variable (type.6).</DESCRIPTION>
+    <FUNCTION>Plat::{ctor}</FUNCTION>
+    <DECORATED>??0Plat@@QAE@ABV0@@Z</DECORATED>
+    <FUNCLINE>42</FUNCLINE>
+    <PATH></PATH>
+  </DEFECT>
+</DEFECTS>

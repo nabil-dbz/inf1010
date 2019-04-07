@@ -15,6 +15,7 @@
 #include <map>
 #include <algorithm>
 #include <functional>
+#include <iterator>
 
 using namespace std;
 
@@ -33,8 +34,8 @@ public:
 	Plat* trouverPlatMoinsCher() const;
 	Plat* trouverPlatPlusCher() const;
 
-	Plat* trouverPlat(const string& nom) const; // TODO
-	vector<pair<string, Plat*>> getPlatsEntre(double borneInf, double borneSup); // TODO
+	Plat* trouverPlat(const string& nom) const;
+	vector<pair<string, Plat*>> getPlatsEntre(double borneInf, double borneSup); 
 	void lirePlats(const string& nomFichier, TypeMenu type);
 	pair<string, Plat*> lirePlatDe(LectureFichierEnSections& fichier);
 

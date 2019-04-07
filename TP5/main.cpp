@@ -19,7 +19,6 @@ int main()
 
 	vector<bool> tests;
 	Restaurant poly("polyfood.txt", "PolyFood", TypeMenu::Soir);
-
 	// Test 1 - Initialisations des gestionnaires de plats
 	tests.push_back((poly.getMenu(TypeMenu::Matin)->getType() == TypeMenu::Matin)
 		&& (poly.getMenu(TypeMenu::Midi)->getType() == TypeMenu::Midi)
@@ -66,7 +65,6 @@ int main()
 	// Test 8 - 9 - Meilleure table
 	tests.push_back(poly.getTables()->getMeilleureTable(8) == table);
 	tests.push_back(poly.getTables()->getMeilleureTable(4)->getId() == 2);
-
 	/*
 	* Tests restaurant
 	*/
@@ -102,7 +100,6 @@ int main()
 
 	//Ne devrait pas pouvoir se faire livrer
 	tests.push_back(!poly.livrerClient(clients[0], commandeMartin));
-
 	//Doit pouvoir se faire livrer
 	tests.push_back(poly.livrerClient(clients[5], commandeMarie));
 
@@ -141,7 +138,6 @@ int main()
 	/*
 	* Affichage des tests
 	*/
-	
 	cout << "TESTS" << endl;
 	for (unsigned int i = 0; i < tests.size(); i++)
 	{

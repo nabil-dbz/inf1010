@@ -9,16 +9,17 @@
 #include "Table.h"
 #include "Foncteur.h"
 #include "GestionnaireGenerique.h"
+#include <functional>
 
 #include <set>
 
-class GestionnaireTables // TODO : Ajouter l'héritage 
+class GestionnaireTables : public GestionnaireGenerique<Table*, set<Table*>>
 {
 public:
 	GestionnaireTables() = default;
-	Table* getTable(int id) const; // TODO
-	Table* getMeilleureTable(int tailleGroupe) const; // TODO
+	Table* getTable(int id) const; 
+	Table* getMeilleureTable(int tailleGroupe) const;
 	void lireTables(const string& nomFichier);
 
-	void afficherTables(ostream& os) const; // TODO
+	void afficherTables(ostream& os) const;
 };
