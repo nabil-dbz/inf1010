@@ -11,7 +11,9 @@
 
 using namespace std;
 
-
+/**
+* @brief Un foncteur prédicat binaire permet de comparer les plats deux à deux du conteneur map.
+*/
 class FoncteurPlatMoinsCher
 { 
 public:
@@ -19,7 +21,9 @@ public:
 		return *(pair1.second) < *(pair2.second);
 	};
 };
-
+/**
+* @brief Un foncteur prédicat unaire ayant la borne inférieure et la borne supérieure comme attributs. Ce foncteur prend en entrée un plat unique du conteneur map et vérifie si son prix est compris entre les bornes.
+*/
 class FoncteurIntervalle
 {
 public:
